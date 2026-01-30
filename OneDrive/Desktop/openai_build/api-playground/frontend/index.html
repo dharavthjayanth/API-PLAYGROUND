@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>API Playground - Notes</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Notes API Playground</h1>
+    <p class="muted">Demonstrates GET / POST / PUT / DELETE endpoints.</p>
+
+    <div class="card">
+      <h2>Create / Update</h2>
+      <div class="grid">
+        <label>
+          Note ID (for update)
+          <input id="noteId" type="number" placeholder="Leave empty to create"/>
+        </label>
+        <label>
+          Title
+          <input id="title" type="text" placeholder="e.g., Shopping list"/>
+        </label>
+      </div>
+      <label>
+        Content
+        <textarea id="content" rows="4" placeholder="Write something..."></textarea>
+      </label>
+
+      <div class="row">
+        <button id="createBtn">POST /notes</button>
+        <button id="updateBtn" class="secondary">PUT /notes/{id}</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>All Notes</h2>
+      <div class="row">
+        <button id="refreshBtn" class="secondary">GET /notes</button>
+      </div>
+      <div id="notes" class="notes"></div>
+    </div>
+
+    <div class="card">
+      <h2>Response</h2>
+      <pre id="output">{}</pre>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
